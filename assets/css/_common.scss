@@ -7,11 +7,25 @@
     src: url(../font/NotoSansJP-Regular.otf);
 }
 @font-face {
-    font-family: 'Nova';
-    src: url(../font/NovaScript.ttf);
+    font-family: 'Noto-Black';
+    src: url(../font/NotoSansJP-Black.otf);
 }
-
-
+@font-face {
+    font-family: 'Noto-Blod';
+    src: url(../font/NotoSansJP-Bold.otf);
+}
+@font-face {
+    font-family: 'Noto-Light';
+    src: url(../font/NotoSansJP-Light.otf);
+}
+@font-face {
+    font-family: 'Noto-Medium';
+    src: url(../font/NotoSansJP-Medium.otf);
+}
+@font-face {
+    font-family: 'Noto-Thin';
+    src: url(../font/NotoSansJP-Thin.otf);
+}
 
 html {
     scroll-behavior: smooth;
@@ -21,11 +35,12 @@ html {
     padding: 0;
     overflow-x: hidden;
     font-size: 0.25641vw;
+    // font-size: 0.078125vw;
     font-family: 'Noto Sans JP';
 
     @include media('lc') {
-        font-size: 0.078125vw;
-        // font-size: 16px;
+        // font-size: 0.078125vw;
+        font-size: 1px;
     }
 }
 

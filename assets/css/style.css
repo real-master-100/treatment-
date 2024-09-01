@@ -621,8 +621,24 @@
   src: url(../font/NotoSansJP-Regular.otf);
 }
 @font-face {
-  font-family: "Nova";
-  src: url(../font/NovaScript.ttf);
+  font-family: "Noto-Black";
+  src: url(../font/NotoSansJP-Black.otf);
+}
+@font-face {
+  font-family: "Noto-Blod";
+  src: url(../font/NotoSansJP-Bold.otf);
+}
+@font-face {
+  font-family: "Noto-Light";
+  src: url(../font/NotoSansJP-Light.otf);
+}
+@font-face {
+  font-family: "Noto-Medium";
+  src: url(../font/NotoSansJP-Medium.otf);
+}
+@font-face {
+  font-family: "Noto-Thin";
+  src: url(../font/NotoSansJP-Thin.otf);
 }
 html {
   scroll-behavior: smooth;
@@ -636,7 +652,7 @@ html {
 }
 @media print, screen and (min-width: 1281px) {
   html {
-    font-size: 0.078125vw;
+    font-size: 1px;
   }
 }
 
@@ -1687,6 +1703,7 @@ main #custome_feed .wrap .title {
   text-decoration: underline;
   font-weight: 700;
   color: #080705;
+  line-height: 3.1;
 }
 @media print, screen and (min-width: 1281px) {
   main #custome_feed .wrap .title {
@@ -1694,14 +1711,27 @@ main #custome_feed .wrap .title {
   }
 }
 main #custome_feed .wrap .feeds .indi_feed {
-  box-shadow: 7px 8px 2px rgba(222, 231, 237, 0.73);
+  box-shadow: 7rem 8rem 2rem rgba(222, 231, 237, 0.73);
   display: flex;
   flex-direction: column;
   align-items: center;
   outline: rgba(42, 186, 216, 0.75) 5rem solid;
   border-radius: 25rem;
   background-color: #FFF;
-  padding: 10rem auto 15rem 10rem;
+  padding-top: 10rem;
+  padding-right: auto;
+  padding-bottom: 15rem;
+  padding-left: 10rem;
+  margin-bottom: 30rem;
+}
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed {
+    padding-top: 32.82px;
+    padding-bottom: 49.23px;
+    padding-left: 32.82px;
+    margin-bottom: 98.46px;
+    box-shadow: 22.974px 26.256px 6.564px rgba(222, 231, 237, 0.73);
+  }
 }
 main #custome_feed .wrap .feeds .indi_feed .top {
   display: flex;
@@ -1711,12 +1741,21 @@ main #custome_feed .wrap .feeds .indi_feed .top {
 main #custome_feed .wrap .feeds .indi_feed .top .left {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 main #custome_feed .wrap .feeds .indi_feed .top .left .avatar {
+  stroke-width: 3px;
+  stroke: #AEE9F4;
   border-radius: 50%;
   border: solid #AEE9F4;
   width: 110rem;
   height: 110rem;
+}
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed .top .left .avatar {
+    width: 361.02px;
+    height: 361.02px;
+  }
 }
 main #custome_feed .wrap .feeds .indi_feed .top .left .avatar img {
   width: 100%;
@@ -1727,22 +1766,40 @@ main #custome_feed .wrap .feeds .indi_feed .top .left .description {
   text-align: left;
   font-family: "Noto Sans JP";
   font-size: 12rem;
-  letter-spacing: -3px;
+  letter-spacing: -5px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed .top .left .description {
+    font-size: 39.384px;
+    letter-spacing: -6px;
+  }
+}
 main #custome_feed .wrap .feeds .indi_feed .top .right {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 main #custome_feed .wrap .feeds .indi_feed .top .right .mainTopic {
   font-size: 19rem;
   line-height: 1.3157;
-  color: #444;
-  font-family: "Noto Sans JP";
+  color: #000;
+  font-family: "Nato";
   font-style: normal;
   font-weight: 900;
+  height: 98rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed .top .right .mainTopic {
+    font-size: 62.358px;
+    height: 321.636px;
+  }
 }
 main #custome_feed .wrap .feeds .indi_feed .top .right .brief_intro {
   height: 25rem;
@@ -1756,6 +1813,71 @@ main #custome_feed .wrap .feeds .indi_feed .top .right .brief_intro {
   flex-direction: row;
   align-items: center;
   padding: 10rem;
+  color: #FFFFFF;
+}
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed .top .right .brief_intro {
+    font-size: 39.384px;
+    height: 82.05px;
+    padding: 32.82px;
+  }
+}
+main #custome_feed .wrap .feeds .indi_feed .bottom {
+  color: #080705;
+  font-family: "Noto Sans JP";
+  font-size: 13rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23rem; /* 176.923% */
+  margin-top: 18rem;
+}
+@media print, screen and (min-width: 1281px) {
+  main #custome_feed .wrap .feeds .indi_feed .bottom {
+    font-size: 42.666px;
+    line-height: 75.486px;
+    margin-top: 59.076px;
+  }
+}
+main #doc_profile .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #doc_profile .wrap p {
+  font-size: 23rem;
+  color: #000;
+}
+@media print, screen and (min-width: 1281px) {
+  main #doc_profile .wrap p {
+    font-size: 75.486px;
+  }
+}
+main #doc_profile .wrap .avatar {
+  position: relative;
+  height: 252rem;
+  width: 100%;
+}
+@media print, screen and (min-width: 1281px) {
+  main #doc_profile .wrap .avatar {
+    height: 827.064px;
+  }
+}
+main #doc_profile .wrap .avatar .tag {
+  border-radius: 10px 0px 0px 10px;
+  background-color: rgba(116, 216, 235, 0.93);
+  width: 298rem;
+  height: 97rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main #doc_profile .wrap .avatar .card {
+  border-radius: 10px 0px 0px 10px;
+  background: linear-gradient(90deg, rgba(43, 186, 217, 0.79) 0%, rgba(1, 168, 220, 0.79) 100%);
+  width: 168rem;
+  height: 105rem;
+  flex-shrink: 0;
+  position: absolute;
 }
 
 footer {

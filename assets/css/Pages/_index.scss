@@ -690,6 +690,7 @@ main {
                 text-decoration: underline;
                 font-weight: 700;
                 color: #080705;
+                line-height: 3.1;
                 @include media('lc') {
                     font-size: 75.486px;
                 }
@@ -697,15 +698,26 @@ main {
 
             .feeds {
                 .indi_feed {
-                    box-shadow: 7px 8px 2px rgba($color: #DEE7ED, $alpha: 0.73);
+                    box-shadow: 7rem 8rem 2rem rgba($color: #DEE7ED, $alpha: 0.73);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     outline: rgba($color: #2ABAD8, $alpha: 0.75) 5rem solid;
                     border-radius: 25rem;
                     background-color: #FFF;
-                    padding: 10rem auto 15rem 10rem;
-
+                    // padding: 10rem auto 15rem 10rem;
+                    padding-top: 10rem;
+                    padding-right: auto;
+                    padding-bottom: 15rem;
+                    padding-left: 10rem;
+                    margin-bottom: 30rem;
+                    @include media('lc') {
+                    padding-top: 32.82px;
+                    padding-bottom: 49.23px;
+                    padding-left: 32.82px;
+                    margin-bottom: 98.46px;
+                    box-shadow: 22.974px 26.256px 6.564px rgba($color: #DEE7ED, $alpha: 0.73);
+                    }
                     .top {
                         display: flex;
                         flex-direction: row;
@@ -713,11 +725,18 @@ main {
                         .left {
                             display: flex;
                             flex-direction: column;
+                            height: 100%;
                             .avatar {
+                                stroke-width: 3px;
+                                stroke: #AEE9F4; 
                                 border-radius: 50%;
                                 border: solid #AEE9F4;
                                 width: 110rem;
                                 height: 110rem;
+                                @include media('lc') {
+                                    width: 361.02px;
+                                    height: 361.02px;
+                                }
                                 img {
                                     width: 100%;
                                     height: 100%;
@@ -728,22 +747,37 @@ main {
                                 text-align: left;
                                 font-family: "Noto Sans JP";
                                 font-size: 12rem;
-                                letter-spacing: -3px;
+                                letter-spacing: -5px;
                                 font-style: normal;
                                 font-weight: 400;
                                 line-height: normal;
+                                @include media('lc') {
+                                    font-size: 39.384px;
+                                letter-spacing: -6px;
+
+                                }
                             }
                         }
                         .right {
                             display: flex;
                             flex-direction: column;
+                            height: 100%;
                             .mainTopic {
                                 font-size: 19rem;
                                 line-height: 1.3157;
-                                color: #444;
-                                font-family: "Noto Sans JP";
+                                color: #000;
+                                font-family: "Nato";
                                 font-style: normal;
                                 font-weight: 900;
+                                height: 98rem;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                @include media('lc') {
+                                    font-size: 62.358px;
+                                     height: 321.636px;
+                                }
                             }
                             .brief_intro {
                                 height: 25rem;
@@ -757,11 +791,76 @@ main {
                                 flex-direction: row;
                                 align-items: center;
                                 padding: 10rem;
+                                color: #FFFFFF;
+                                @include media('lc') {
+                                    font-size: 39.384px;
+                                     height: 82.05px;
+                                     padding: 32.82px;
+                                }
                             }
                         }
                     }
+
+                    .bottom {
+                        color: #080705;
+                        font-family: "Noto Sans JP";
+                        font-size: 13rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 23rem; /* 176.923% */
+                        margin-top: 18rem;
+                        @include media('lc') {
+                            font-size: 42.666px;
+                             line-height: 75.486px;
+                             margin-top: 59.076px;
+                        }
+
+                    }
                 }
             }
+        }
+    }
+
+    #doc_profile {
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // background-color: yellow;
+            p {
+                font-size: 23rem;
+                color: #000;
+                @include media('lc') {
+                    font-size: 75.486px;
+                }
+            }
+            .avatar {
+                position: relative;
+                height: 252rem;
+                width: 100%;
+                @include media('lc') {
+                    height: 827.064px;
+                }
+                .tag {
+                    border-radius: 10px 0px 0px 10px;
+                    background-color: rgba(116, 216, 235, 0.93);
+                    width: 298rem;
+                    height: 97rem;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .card {
+                    border-radius: 10px 0px 0px 10px;
+background: linear-gradient(90deg, rgba(43, 186, 217, 0.79) 0%, rgba(1, 168, 220, 0.79) 100%);
+width: 168rem;
+height: 105rem;
+flex-shrink: 0;
+position: absolute;
+                }
+            }
+        
         }
     }
 }
