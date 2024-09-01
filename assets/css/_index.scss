@@ -1,0 +1,184 @@
+.section-mv {
+    position: relative;
+
+    .comp-main-slider {
+        width: calc(100% - 374rem);
+        -webkit-transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        will-change: opacity;
+        margin-left: auto;
+        position: relative;
+        height: calc(100vh - 163px);
+
+        @include media('cst_hd_nav') {
+            height: calc(100vh - 136px);
+        }
+
+        @include media('tb') {
+            height: calc(100vh - 70px);
+        }
+
+        @include media('sp') {
+            width: calc(100% - 28rem);
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background: #fff;
+            -webkit-transition: width 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: width 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+            will-change: width;
+        }
+
+        &.loaded {
+            opacity: 1;
+        }
+
+        &.loaded::after {
+            width: 0%;
+        }
+
+        li {
+            position: absolute;
+            width: 0;
+            height: 100%;
+            overflow: hidden;
+            -webkit-transition: width 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+            transition: width 1.8s cubic-bezier(0.65, 0, 0.35, 1);
+            will-change: width;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+            .img_wrap {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-size: cover;
+                pointer-events: none;
+
+                img {
+                    opacity: 0;
+                }
+            }
+
+            &.display_slide3 {
+                width: 100%;
+                z-index: 10;
+                -webkit-transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+                transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+                will-change: width;
+            }
+
+            &.display_slide2 {
+                width: 100%;
+                z-index: 15;
+            }
+        }
+    }
+
+    .main_ttl {
+        position: absolute;
+        bottom: 0;
+        left: 90rem;
+
+        @include media('sp') {
+            left: 125rem;
+            padding-left: 80rem;
+        }
+
+        .title_1 {
+            font-size: 20.5rem;
+            letter-spacing: 0.19em;
+            line-height: 35.87rem;
+            color: #d4b669;
+
+            @include media('sp') {
+                font-size: 18.8rem;
+                letter-spacing: 0.19em;
+                line-height: 32.89rem;
+                color: #fff;
+            }
+        }
+
+        .title_2 {
+            font-family: "fot-tsukumin-pr6n", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 90rem;
+            letter-spacing: 0.04em;
+            line-height: 156.45rem;
+
+            @include media('sp') {
+                font-size: 82.53rem;
+                letter-spacing: 0.04em;
+                line-height: 143.46rem;            
+                color: white;    
+            }
+
+            span {
+                &:last-child {
+                    color: white;
+                }
+            }
+        }
+
+        .Mv__scroll {
+
+            position: relative;
+            width: fit-content;
+            padding-bottom: 108rem;
+            margin-top: 50rem;
+
+            .text {
+                font-size: 16rem;
+                letter-spacing: 0.1em;
+                line-height: 43.04rem;
+                writing-mode: vertical-rl;
+            }
+
+            .line {
+                position: absolute;
+                width: 1px;
+                height: 80rem;
+                left: 50%;
+                bottom: 0;
+                background-color: #ddd;
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $text_color;
+                    -webkit-animation-name: line-repetition;
+                    animation-name: line-repetition;
+                    -webkit-animation-duration: 4.0s;
+                    animation-duration: 4.0s;
+                    -webkit-animation-timing-function: cubic-bezier(0.52, 0.08, 0.18, 1);
+                    animation-timing-function: cubic-bezier(0.52, 0.08, 0.18, 1);
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                }
+            }
+        }
+    }
+}

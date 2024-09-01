@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Maru';
+    src: url(../font/NatsuzemiMaruGothic.ttf);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 0.0625vw;
+
+    @include media('sp') {
+        font-size: 0.133333vw;
+    }
+}
+
+body {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'Maru';
+    font-weight: 300;
+    font-style: normal;
+    color: $text_color;
+    font-size: 19rem;
+    line-height: 46rem;
+}
+
+main {
+    margin-top: 163px;
+
+    @include media('cst_hd_nav') {
+        margin-top: 136px;
+    }
+
+    @include media('tb') {
+        margin-top: 70px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrap {
+    max-width: 1222rem;
+    width: calc(100% - 36rem);
+
+    @include media('sp') {
+        width: calc(100% - 56rem);
+    }
+
+    margin: auto;
+}
+
+.wrap_rl {
+    display: flex;
+    flex-wrap: wrap;
+
+    ._col {
+        width: 50%;
+
+        @include media('sp') {
+            width: 100%;
+        }
+
+        &._sp_right {
+            @include media('sp') {
+                padding-right: 28rem;
+            }
+        }
+
+        &._sp_left {
+            @include media('sp') {
+                padding-left: 28rem;
+            }
+        }
+    }
+
+    ._left {
+        padding-left: clamp(18rem, calc(50% - 610rem), 50%);
+
+        @include media('sp') {
+            padding-left: 0;
+        }
+    }
+
+    ._right {
+        padding-right: clamp(18rem, calc(50% - 610rem), 50%);
+
+        @include media('sp') {
+            padding-right: 0;
+        }
+    }
+}
+// loading
+.comp-index-loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10000;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    will-change: opacity;
+
+    &.loaded {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .load_inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &.loaded {
+            opacity: 0;
+        }
+
+        .loading_logo {
+            display: block;
+            text-align: center;
+            margin: auto;
+            opacity: 0;
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            -webkit-transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), -webkit-filter 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), -webkit-filter 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), filter 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), filter 1.2s cubic-bezier(0.77, 0, 0.175, 1), -webkit-filter 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            will-change: opacity, filter;
+
+            font-size: 18px;
+
+            img {
+                width: 280px;
+                margin-top: 60px;
+            }
+        }
+
+        .loading_logo.load {
+            opacity: 1;
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+        }
+    }
+}
