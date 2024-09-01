@@ -1094,7 +1094,7 @@ main #fv div div img {
   }
 }
 main #intro {
-  background-color: red;
+  background-color: #E9EEF0;
 }
 main #intro div.wrap {
   display: flex;
@@ -1244,7 +1244,7 @@ main #que {
 main #que div.wrap {
   display: flex;
   align-items: flex-start;
-  background: #E9EEF0 url("../image/fv_bg.png") no-repeat center;
+  background: #E9EEF0 url("../image/que_bg.png") no-repeat center;
   background-size: cover;
   padding-top: 37rem;
   padding-bottom: 44rem;
